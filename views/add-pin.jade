@@ -1,0 +1,20 @@
+extends layoutInApp
+
+block content
+  h1(class="text-center") Add a Pin
+  div(class="col-md-4 col-md-offset-4")
+    form(action="javascript:void(0);", method="POST", id="add-pin-form")
+      div(class="form-group")
+        label Pin Title
+        input(type="text", class="form-control", name="title", placeholder="Enter Title" )
+      div(class="form-group")
+        label Url
+        input(type="text", class="form-control", name="url", placeholder="Enter URL")
+      div(class="form-group")
+        button(type="submit", class="btn btn-primary"): span(class="fa fa-plus") Add
+  div(class="pin-container")
+  script(type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
+  script(type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js")
+  script(type='text/javascript' src='js/shared.js')
+  script(type='text/javascript' src='js/add-pin.js')
+      

@@ -1,0 +1,13 @@
+extends layoutInApp
+
+block content
+  div(class="container")
+    div(class="page-header text-center")
+      h1 Profile Page  
+    div(class="row")
+      div(class="col-sm-12")
+        div(class="well")
+          h3: span(class="fa fa-user") #{user.local.name}
+            p
+              | <strong>id</strong>: #{user._id} <br>
+              | <strong>email</strong>: #{user.local.email} <br>

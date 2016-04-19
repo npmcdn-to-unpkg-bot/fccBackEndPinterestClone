@@ -1,0 +1,14 @@
+extends layoutInApp
+
+block content
+  h1(class="text-center") My Pins
+  p(class="text-center") Accessable from outside with id from Profile with user/profileID
+  div(class="pin-container")
+    div(class="grid js-packery")
+      
+  script(type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
+  script(type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js")
+  script(type='text/javascript' src="https://npmcdn.com/masonry-layout@4.0.0/dist/masonry.pkgd.min.js")
+  script(type='text/javascript' src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js")
+  script(src="js/shared.js")
+  script(src="js/my-pins.js")    

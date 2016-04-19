@@ -1,0 +1,10 @@
+extends layoutAuth
+
+block content
+  div(class="container")
+    div(class="jumbotron text-center")
+      h1 Pinterest Clone
+      p Login or Register with:
+      a(href="/login" class="btn btn-default"): span(class="fa fa-lock") Login
+      a(href="/auth/twitter" class="btn btn-info"): span(class="fa fa-twitter") Login with Twitter
+      a(href="/signup" class="btn btn-default"): span(class="fa fa-user") Sign up

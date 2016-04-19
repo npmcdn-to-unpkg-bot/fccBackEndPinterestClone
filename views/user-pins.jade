@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css')
+    style.
+      .navbar-right{
+        margin-right:2%;
+      }
+      body{
+        word-wrap:break-word;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .grid-item span{
+        position:relative;
+        right: 0px;
+      }
+      .grid-item{
+        float: left;
+        width: 150px;
+        height: 150px;
+        margin: 1%;
+      }
+      .grid-item img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+      }
+      .grid-item--width {
+        width: 300px; 
+      }
+      .grid-item--height {
+        height: 300px;
+      }
+  body
+    nav(class="navbar navbar-default navbar-static-top navbar-inverse")
+      div(class="container-fluid")
+        p(class="navbar-text navbar-left")<a href="/login"><i class="fa fa-lock"></i> Login</a>
+        p(class="navbar-text navbar-left")<a href="/signup"><i class="fa fa-user"></i> Sign Up</a>
+    h1(class="text-center") Pins from user with ID: 
+    h1(class="userID text-center") #{userID}
+    div(class="pin-container")
+      div(class="grid js-packery")
+        
+    script(type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.min.js", integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=", crossorigin="anonymous")
+    script(type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js")
+    script(type='text/javascript' src="https://npmcdn.com/masonry-layout@4.0.0/dist/masonry.pkgd.min.js")
+    script(type='text/javascript' src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js")
+    script(src="../js/shared.js")
+    script(src="../js/user-pins.js") 
+    script(type='text/javascript' src='http://localhost:35729/livereload.js?snipver=1')
