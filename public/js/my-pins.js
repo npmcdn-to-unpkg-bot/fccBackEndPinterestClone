@@ -1,17 +1,20 @@
 var myPins = function(){'use-strict';
   $( document ).ready(function() {
 
-    var $grid = $('.grid').masonry({
-      columnWidth: '.grid-item',
-      itemSelector: '.grid-item',
-      gutter: 10
-    });
     requestMyPins();
 
     function requestMyPins(){
       $('.grid').empty();
+
       $.post( "/my-pins", {action: 'show'} ,function( data ) {
         createUI(data);
+        $grid.imagesLoaded().progress( function() {
+          var $grid = $('.grid').masonry({
+            columnWidth: '.grid-item',
+            itemSelector: '.grid-item',
+          });
+          $grid.masonry('layout');
+        });
       });
     }
 
@@ -57,10 +60,6 @@ var myPins = function(){'use-strict';
         div.append(img);
         div.append(title);
         div.appendTo('.grid');
-      });
-
-      $grid.imagesLoaded().progress( function() {
-        $grid.masonry('layout');
       });
     }
   });//doc ready

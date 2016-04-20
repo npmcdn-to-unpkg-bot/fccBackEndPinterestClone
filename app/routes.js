@@ -59,7 +59,7 @@ module.exports = function(app, passport) {
 
   // User Pins =====================
   app.get('/my-pins', isLoggedIn, function(req, res) {
-    res.render('my-pins.jade');
+    res.render('my-pins.jade', {id: req.user._id});
   });
 
   app.post('/my-pins', isLoggedIn, function(req, res) {
